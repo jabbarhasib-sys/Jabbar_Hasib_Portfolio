@@ -29,7 +29,7 @@ function apply(t,persist){root.dataset.theme=t;btn.setAttribute('aria-pressed',S
  readTheme();tc.setAttribute('content',TH.cream);if(persist){try{localStorage.setItem('theme',t)}catch(e){}}
  if(typeof fitAll==='function'&&sx){plates();if(R){drawSoil(0);drawCon(0)}}}
 btn.addEventListener('click',function(){var next=root.dataset.theme==='dark'?'light':'dark';if(!R){root.classList.add('theme-anim');setTimeout(function(){root.classList.remove('theme-anim')},450)}apply(next,true)});
-mq.addEventListener&&mq.addEventListener('change',function(e){if(!saved())apply(e.matches?'dark':'light',false)});
+mq.addEventListener&&mq.addEventListener('change',function(e){if(!saved())apply('light',false)});
 btn.setAttribute('aria-pressed',String(root.dataset.theme==='dark'));btn.setAttribute('aria-label',root.dataset.theme==='dark'?'Switch to light mode':'Switch to dark mode');tc.setAttribute('content',TH.cream)})();
 /* certificate viewer */
 (function(){var dlg=$('#certdlg'),img=$('#certimg'),C={};try{C=JSON.parse($('#certs-json').textContent)}catch(e){}
