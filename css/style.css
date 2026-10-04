@@ -1,4 +1,4 @@
-﻿:root{--cream:#e7e2d8;--ink:#171717;--red:#ef493c;--dred:#b92725;--paper:#fffdf8;--loam:#241a12;--hl:rgba(23,23,23,.16);--hl2:rgba(23,23,23,.08);--nav-bg:rgba(231,226,216,.94);--edge:#171717;--on-dark:#e7e2d8;color-scheme:light;--mut:rgba(23,23,23,.56);--e:cubic-bezier(.22,1,.36,1);--c:cubic-bezier(.65,0,.35,1);
+:root{--cream:#e7e2d8;--ink:#171717;--red:#ef493c;--dred:#b92725;--paper:#fffdf8;--loam:#241a12;--hl:rgba(23,23,23,.16);--hl2:rgba(23,23,23,.08);--nav-bg:rgba(231,226,216,.94);--edge:#171717;--on-dark:#e7e2d8;color-scheme:light;--mut:rgba(23,23,23,.56);--e:cubic-bezier(.22,1,.36,1);--c:cubic-bezier(.65,0,.35,1);
 --hero-type-y:0px;--hero-type-scale:1;--hero-type-alpha:1;--hero-meta:1;--manifesto-wipe:0%;--manifesto-scale:1;--rail-x:0px;--rail-meter:0%;--packet-alpha:0;--packet-enter:38px;--packet-scale:.78;--packet-cut:0;--packet-meter:0%;--packet-copy-x:0px;--season-y:-4%;--season-scale:1.1;
 box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 :root[data-theme=dark]{--cream:#16110d;--ink:#ece6da;--paper:#201912;--loam:#0c0805;--hl:rgba(236,230,218,.18);--hl2:rgba(236,230,218,.08);--mut:rgba(236,230,218,.62);--nav-bg:rgba(22,17,13,.92);--edge:rgba(236,230,218,.24);color-scheme:dark}
@@ -38,7 +38,7 @@ nav .brand b{color:var(--red);font-weight:400}
 .dark{background:var(--loam);color:var(--on-dark)}
 #soil,#contour{position:absolute;inset:0;width:100%;height:100%}
 .photo,.sky{position:absolute;inset:0}
-.photo img{width:100%;height:100%;object-fit:cover;object-position:62% 50%;display:block;transform:scale(var(--photo-scale,1.15))}
+.photo img{width:100%;height:100%;object-fit:cover;object-position:62% 50%;display:block;transform:scale(var(--photo-scale,1.15));filter:grayscale(1)}
 .scrim{position:absolute;inset:0;opacity:var(--scrim,0);background:linear-gradient(to right,rgba(20,14,10,.78),rgba(20,14,10,.25) 55%,transparent)}
 .sky{transform:translateY(var(--sky-y,0%));will-change:transform}
 .lock{position:absolute;left:50%;top:50%;z-index:3;display:flex;flex-direction:column;align-items:center;gap:2.2vw;text-align:center;white-space:nowrap;color:var(--on-dark);transform:translate(calc(-50% + var(--lx,0px)),calc(-50% + var(--ly,0px))) scale(var(--ls,1))}
