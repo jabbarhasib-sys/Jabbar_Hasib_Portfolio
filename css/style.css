@@ -39,6 +39,7 @@ nav .brand b{color:var(--red);font-weight:400}
 #soil,#contour{position:absolute;inset:0;width:100%;height:100%}
 .photo,.sky{position:absolute;inset:0}
 .photo img{width:100%;height:100%;object-fit:cover;object-position:62% 50%;display:block;transform:scale(var(--photo-scale,1.15));filter:grayscale(1)}
+.photo::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 38% 28% at 62% 30%,rgba(255,255,255,.22) 0%,rgba(255,255,255,.08) 45%,transparent 70%);pointer-events:none;z-index:1}
 .scrim{position:absolute;inset:0;opacity:var(--scrim,0);background:linear-gradient(to right,rgba(20,14,10,.78),rgba(20,14,10,.25) 55%,transparent)}
 .sky{transform:translateY(var(--sky-y,0%));will-change:transform}
 .lock{position:absolute;left:50%;top:50%;z-index:3;display:flex;flex-direction:column;align-items:center;gap:2.2vw;text-align:center;white-space:nowrap;color:var(--on-dark);transform:translate(calc(-50% + var(--lx,0px)),calc(-50% + var(--ly,0px))) scale(var(--ls,1))}
