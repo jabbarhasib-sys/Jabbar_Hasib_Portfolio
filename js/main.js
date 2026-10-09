@@ -88,6 +88,22 @@ face:function(g){g.C(100,150,42);g.C(86,142,3.5,INK,INK);g.C(114,142,3.5,INK,INK
 fruit:function(g){g.C(92,112,46);g.L([[92,66],[100,48]],INK,2.5);g.R(40,52,104,112,RED,2.5);g.T('APPLE 0.98',40,44,RED,9);
  g.C(212,150,38);g.R(170,106,84,86);g.T('ORANGE 0.95',172,98,INK,9);
  g.B(function(x){x.arc(150,212,84,Math.PI*.14,Math.PI*.86)},INK,16);g.R(52,236,196,84,RED,2);g.T('BANANA 0.97',54,230,RED,9);g.T('FRUIT CLASSIFIER',26,372)},
+legal:function(g){
+ // Document outline
+ g.R(30,36,200,260);g.F(30,36,200,20,INK);
+ // Text lines simulating legal text
+ [70,90,110,130,150,170,190,210].forEach(function(y,i){g.L([[46,y],[i%3===0?216:192,y]],A(.6),1.5)});
+ // Highlighted / flagged section
+ g.F(46,154,170,14,'rgba(239,73,60,.22)');g.L([[46,154],[216,154],[216,168],[46,168],[46,154]],RED,1.5);
+ // Classification label chip
+ g.F(46,220,90,26,RED);g.T('CIVIL',52,237,TH.cream,9.5);
+ g.R(146,220,86,26);g.T('TAX',152,237,INK,9.5);
+ // Model accuracy bars
+ g.T('LR',36,310,INK,8.5);g.R(54,300,162,12);g.F(54,300,148,12,RED);
+ g.T('RF',36,328,INK,8.5);g.R(54,318,162,12);g.F(54,318,122,12,INK);
+ g.T('DT',36,346,INK,8.5);g.R(54,336,162,12);g.F(54,336,104,12,A(.55));
+ // TF-IDF label
+ g.T('TF-IDF BIGRAMS',36,372,INK,9);g.T('INDIAN LAW NLP',36,388,RED,8.5)},
 cert:function(g){g.R(30,50,240,300);g.R(40,60,220,280,A(.3),1);g.T('CERTIFICATE',58,100,INK,10);g.T('OF PARTICIPATION',58,114,INK,8.5);var ln=(g.dt||'').split('|');ln.forEach(function(t,i){g.T(t,58,162+i*38,i?INK:RED,34,1)});g.L([[58,220],[240,220]]);g.L([[58,236],[200,236]]);g.L([[58,252],[170,252]]);g.C(214,306,26,RED,null,2.5);g.C(214,306,17);g.L([[202,330],[196,356]],RED,2.5);g.L([[226,330],[232,356]],RED,2.5);g.T('HACKATHON',58,322,INK,9)},
 style:function(g){g.B(function(x){x.arc(150,44,10,Math.PI*.1,Math.PI*1.9)});g.L([[150,60],[150,72]]);g.L([[150,72],[34,128],[266,128],[150,72]]);
  g.L([[112,152],[188,152],[198,206],[250,326],[50,326],[102,206],[112,152]]);g.B(function(x){x.arc(150,152,22,0,Math.PI)});g.L([[100,206],[200,206]],RED,3);
